@@ -2,6 +2,7 @@ import requests
 import requests
 import datetime
 import time
+import os
 
 header = { 'Authorization': f'ApeKey {os.environ['APE_KEY']}' }
 mode = {'mode': 'time'}
