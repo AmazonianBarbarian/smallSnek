@@ -5,7 +5,7 @@ import time
 
 header = { 'Authorization': 'ApeKey placekeyhere' }
 mode = {'mode': 'time'}
-baseUrl = requests.get('https://api.monkeytype.com/results', headers=header) # to ass params include [, params=mode ]
+baseUrl = requests.get('https://api.monkeytype.com/results', headers=header) # to add params include [, params=mode ]
 responce = baseUrl.json()
 timeTillUse = datetime.datetime.fromtimestamp(int(baseUrl.headers['x-ratelimit-reset'])).strftime('%Y-%m-%d %H:%M:%S UTC')
 
