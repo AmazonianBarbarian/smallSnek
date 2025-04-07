@@ -3,7 +3,7 @@ import requests
 import datetime
 import time
 
-header = { 'Authorization': 'ApeKey placekeyhere' }
+header = { 'Authorization': f'ApeKey {os.environ['APE_KEY']}' }
 mode = {'mode': 'time'}
 baseUrl = requests.get('https://api.monkeytype.com/results', headers=header) # to add params include [, params=mode ]
 responce = baseUrl.json()
